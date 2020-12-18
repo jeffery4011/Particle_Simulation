@@ -32,7 +32,7 @@ void Particle::update(double dt)
     anglePos = anglePos + angular_velocity_set * dt;
 }
 
-// the boundary of particle, update its new position in bondary
+// the boundary of particle, update its new position in boundary
 void Particle::Boundary(double X_min, double X_max, double Y_min, double Y_max)
 {
     if (xPos > X_max)

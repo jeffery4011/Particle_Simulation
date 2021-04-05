@@ -21,12 +21,18 @@
     <ClCompile Include="Particle.cpp">
       <Filter>资源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Field.cpp">
+      <Filter>资源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Particle.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="progressbar.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Field.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

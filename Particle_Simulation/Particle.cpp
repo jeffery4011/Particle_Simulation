@@ -22,6 +22,7 @@ void Particle::printPoint()
 {
     cout << "x = " << xPos << endl;
     cout << "y = " << yPos << endl;
+    cout << "angle = " << anglePos << endl;
 }
 
 // update the particle according to its current linear_velocity and angular_velocity
@@ -59,6 +60,17 @@ void Particle::Boundary(double X_min, double X_max, double Y_min, double Y_max)
     }
 }
 
+
+void Particle::set_linear_velocity(double v)
+{
+    linear_velocity_set = v;
+}
+
+void Particle::set_angular_velocity(double w)
+{
+    angular_velocity_set = w;
+}
+
 //get the value of the particle
 double Particle::get_X() { return xPos; }
 
@@ -69,4 +81,13 @@ double Particle::get_Velocity() { return linear_velocity_set; }
 double Particle::get_angle() { return anglePos; }
 
 double Particle::get_angle_velocity() { return angular_velocity_set; }
+
+double Particle::get_derivative(double F_forward, double F_backward, double sensor_r, double sensor_diff)
+{
+    if (F_forward > F_backward + sensor_diff / 2) { return 1; }
+    else {
+        if (F_backward > F_forward + sensor_diff) { return -1; }
+        else { return 1; }
+    }
+}
 //end of the value of the particle

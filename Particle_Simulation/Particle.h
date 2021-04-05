@@ -15,6 +15,8 @@ public:
     void printPoint();// print the particle position x,y
     void update(double dt); // update the particle according to its current linear_velocity and angular_velocity
     void Boundary(double X_min, double X_max, double Y_min, double Y_max); // the boundary of particle, update its new position in bondary
+    void set_linear_velocity(double v);
+    void set_angular_velocity(double w);
     
     //get the value of the particle
     double get_X();
@@ -22,6 +24,7 @@ public:
     double get_Velocity();
     double get_angle();
     double get_angle_velocity();
+    double get_derivative(double F_forward, double F_backward, double sensor_r,double sensor_diff);
     //end of the value of the particle
 
 
